@@ -2,27 +2,27 @@ const styles = [
   {
     'id': 'zoomstack-roads',
     'name': 'OS Zoomstack (roads style)',
-    'url': './data/style-roads.json'
+    'url': 'static/data/style-roads.json'
   },
   {
     'id': 'zoomstack-outdoor',
     'name': 'OS Zoomstack (outdoor style)',
-    'url': './data/style-outdoor.json'
+    'url': 'static/data/style-outdoor.json'
   },
   {
     'id': 'zoomstack-ons',
     'name': 'OS Zoomstack (ONS style)',
-    'url': './data/style-os.json'
+    'url': 'static/data/style-os.json'
   },
   {
     'id': 'ons-light',
     'name': 'OpenMapTiles (ONS style)',
-    'url': './data/style-omt.json'
+    'url': 'static/data/style-omt.json'
   },
   {
     'id': 'ons-dark',
     'name': 'OpenMapTiles (ONS dark)',
-    'url': './data/style-dark.json'
+    'url': 'static/data/style-dark.json'
   },
   {
     'id': 'os-1900',

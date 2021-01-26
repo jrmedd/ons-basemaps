@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#menu-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#menu-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu {
+    background: #fff;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#search-form {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30rem;
+    max-width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99999999;
+    height: 4rem;
+}
+
+#search-form > * + * {
+    margin-left: 1rem;
+}
+
+#search-form input {
+    font-size: 1rem;
+    flex: 1;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}

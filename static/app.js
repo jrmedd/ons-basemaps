@@ -1,25 +1,26 @@
-var mapLeft = new mapboxgl.Map({
+
+const mapLeft = new mapboxgl.Map({
   container: 'before',
   style: styles[0].url,
-  center: [-1.2471735, 50.8625412],
+  center: [latitudeGuess, longitudeGuess],
   zoom: 13,
   maxZoom: 16,
   attributionControl: false
 });
 mapLeft.addControl(new mapboxgl.AttributionControl(), 'bottom-left');
 
-var mapRight = new mapboxgl.Map({
-  container: 'after',
+const mapRight = new mapboxgl.Map({
+  container: "after",
   style: styles[0].url,
-  center: [-1.2471735, 50.8625412],
+  center: [latitudeGuess, longitudeGuess],
   zoom: 13,
-  maxZoom: 16
+  maxZoom: 16,
 });
 
 // A selector or reference to HTML element
-var container = '#comparison-container';
+const container = '#comparison-container';
 
-var map = new mapboxgl.Compare(mapLeft, mapRight, container, {
+const map = new mapboxgl.Compare(mapLeft, mapRight, container, {
   // Set this to enable comparing two maps by mouse movement:
   // mousemove: true
 });
@@ -47,11 +48,11 @@ function genOptions(side) {
 genOptions('menu-left');
 genOptions('menu-right');
 
-var inputsLeft = document.getElementsByName('menu-left')[0];
-var inputsRight = document.getElementsByName('menu-right')[0];
+const inputsLeft = document.getElementsByName('menu-left')[0];
+const inputsRight = document.getElementsByName('menu-right')[0];
 
-var overlaysLeft = document.getElementsByName('menu-left-overlays');
-var overlaysRight = document.getElementsByName('menu-right-overlays');
+const overlaysLeft = document.getElementsByName('menu-left-overlays');
+const overlaysRight = document.getElementsByName('menu-right-overlays');
 
 // Switch layer function
 function switchLayer(value, map) {

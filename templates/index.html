@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ONS Basemaps Comparison</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css" type="text/css" />
+  </head>
+  <body>
+      <main>
+        <h1 class="sr-only">PMS Basemaps Comparison</h1>
+        <form id="search-form">
+          <input id="location-query" name="location-query" />
+          <button type="submit">Find</button>
+          <button id="find-me" type="button">Find me</button>
+        </form>
+        <div id="comparison-container">
+          <div id="before" class="map"></div>
+          <div id="after" class="map"></div>
+        </div>
+        <div id="menu-left" class="menu"></div>
+        <div id="menu-right" class="menu"></div>
+      </main>
+    <script>
+      const latitudeGuess = "{{ latitude }}";
+      const longitudeGuess = "{{ longitude }}";
+    </script>
+    <script src="{{ url_for('static', filename='layers.js') }}"></script>
+    <script src="{{ url_for('static', filename='config.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="{{ url_for('static', filename='search.js') }}"></script>
+  </body>
+</html>
